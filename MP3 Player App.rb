@@ -1,12 +1,11 @@
 require './Player'
 
 Shoes.app :width => 475, :height => 180, :title => "MP3 Player" do
-	background white
-	caption 'MP3 Player by Grant S.'
+	background deepskyblue..white
+	caption 'MP3 Player by Grant Schiller'
 	@player = Player.new
-
 	stack do
-		para 'Here we go!'
+		para 'Select a song, please.'
 		flow  do
 			button("Select file") do
 				song = Song.new(ask_open_file)
